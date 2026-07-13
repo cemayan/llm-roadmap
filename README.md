@@ -10,6 +10,7 @@ the single source of truth for the plan.
 |---|---|
 | `ROADMAP.md` | The plan itself — phases, checkboxes, traps, resources |
 | `PROGRESS.md` | Weekly log: what got done, what's next, blockers |
+| `RESOURCES.md` | The short resource list resolved to direct links — don't add to it |
 | `phase-0-intuition/` | Karpathy/3B1B notes, nanoGPT experiment, "GPT by hand" post draft |
 | `phase-1-primitives/` | Go agent loop, MCP server, RAG experiment, eval harness |
 | `phase-2-product-llm/` | Pointers only — the real work lives in the entity-journey product repo |
