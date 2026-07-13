@@ -8,4 +8,7 @@
   - [ ] "Writing evals for an LLM feature" (after Phase 2)
   - [ ] "Adding LLM diagnosis to an observability product" (after Phase 2)
 - [ ] Keep fundamentals sharp: distributed systems, debugging, design
+- [ ] Turn the internal AI-integration work into a measured, institutional asset:
+      impact metrics (review time, defect rate), internal playbook, teach others
+      — see [notes/career-resilience.md](../notes/career-resilience.md)
 - [ ] Plan review every 3 months — **first check-in: October 2026**
