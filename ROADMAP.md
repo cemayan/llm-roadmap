@@ -11,7 +11,8 @@ Goal: transformer, tokens, context, attention, why hallucinations happen — at 
 
 - [ ] 3Blue1Brown neural network + transformer series (quick pass, ~3 hours)
 - [ ] Karpathy "Zero to Hero": micrograd → makemore (first 2-3 videos) → **"Let's build GPT"** → the tokenizer video
-- [ ] Mini project: train a small character-level model with nanoGPT (on the Mac or a rented single GPU, ~$10-20)
+- [ ] Mini project: train a small character-level model with nanoGPT (on the MacBook M4 Pro
+      via PyTorch MPS — no GPU rental; goal is intuition, not a good model)
   - Fun variant: train on a Turkish corpus and watch how the output degrades
 - [ ] Deliverable: a short note/post — "What I learned building GPT by hand"
 
