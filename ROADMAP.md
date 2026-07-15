@@ -2,7 +2,7 @@
 
 > Goal: stay useful and in demand as software engineering shifts around LLMs.
 > NOT training my own LLM — building production-grade systems on top of and around LLMs.
-> Status: not started. Last updated: 2026-07-12.
+> Status: not started. Last updated: 2026-07-15.
 > Suggested pace: 6-8 hours/week. Every phase ends with a concrete deliverable — watching videos doesn't count as progress.
 
 ## Phase 0 — Intuition: stop treating the LLM as a black box (weeks 1-4)
@@ -21,9 +21,12 @@ Goal: build agent / tool-use / RAG systems at the raw-API level, no frameworks. 
 
 - [ ] Claude API fundamentals: messages, tool use, streaming, prompt caching (Anthropic docs + the "Building Effective Agents" post)
 - [ ] Hand-rolled agent loop: "LLM + tools + loop" in Go, no framework — NO LangChain etc.
+- [ ] Production hardening of the loop: rate limits + retry/backoff, timeouts, malformed/partial
+      JSON from the model, structured output — the boring layer that separates demo from production
 - [ ] MCP: write a simple MCP server with the Go SDK (any topic, warm-up exercise)
 - [ ] RAG basics: embeddings, chunking, retrieval — one small experiment (e.g. Q&A over my own notes)
 - [ ] Intro to evals: try promptfoo OR write my own assertion harness
+      — shape the exercise like Phase 2's golden journeys (input + expected diagnosis) so it bridges directly
 - [ ] Deliverable: a working minimal agent + MCP server in Go (on GitHub)
 
 ## Phase 2 — The real proof: an LLM layer on the entity-journey product (weeks 8-16)
@@ -38,6 +41,11 @@ This phase runs as part of the OSS product plan (todo.md) — not a separate pro
       (also a product differentiator: nobody in the competitor table has it)
 - [ ] **Eval set — the heart of the plan:** 20-30 golden journeys + expected diagnoses;
       mix of assertion-based + LLM-as-judge; runs in CI, catches regressions
+- [ ] **Prompt injection & tool safety:** journey data is untrusted input — a hostile string in
+      error_code/payload must not become instructions to the LLM. Treat data as data (delimit/escape),
+      keep MCP tools read-only, red-team the assistant with a few poisoned journeys in the eval set
+- [ ] **Context strategy:** long timelines won't fit the window — decide summarize/truncate/paginate
+      up front as a design note, don't discover it in production
 - [ ] **LLM observability:** token/cost/latency instrumentation — dogfooding my own product
 - [ ] Deliverable: the LLM feature in the README + demo GIF; eval results as a table
 

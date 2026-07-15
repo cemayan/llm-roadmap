@@ -11,5 +11,9 @@ Goal: "I built a production-grade, eval'd, instrumented LLM system" in the portf
 - [ ] Backend as an MCP server: lookup API as MCP tools ("where did ORD-123 get stuck?")
 - [ ] Eval set — the heart: 20-30 golden journeys + expected diagnoses,
       assertion-based + LLM-as-judge, runs in CI
+- [ ] Prompt injection & tool safety: journey data is untrusted input — delimit/escape,
+      read-only MCP tools, poisoned journeys in the eval set
+- [ ] Context strategy: long timelines vs. the window — summarize/truncate/paginate
+      decided as a design note up front
 - [ ] LLM observability: token/cost/latency instrumentation (dogfooding)
 - [ ] Deliverable: LLM feature in README + demo GIF; eval results table
