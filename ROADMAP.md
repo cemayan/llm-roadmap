@@ -2,7 +2,7 @@
 
 > Goal: stay useful and in demand as software engineering shifts around LLMs.
 > NOT training my own LLM — building production-grade systems on top of and around LLMs.
-> Status: not started. Last updated: 2026-07-15.
+> Status: not started. Last updated: 2026-07-20.
 > Suggested pace: 6-8 hours/week. Every phase ends with a concrete deliverable — watching videos doesn't count as progress.
 
 ## Phase 0 — Intuition: stop treating the LLM as a black box (weeks 1-4)
@@ -59,6 +59,45 @@ This phase runs as part of the OSS product plan (todo.md) — not a separate pro
 - [ ] Don't drop the fundamentals: distributed systems, debugging, design — the engineer who
       can't audit AI output is in the most fragile position
 - [ ] Review this plan every 3 months (first check-in: October 2026)
+
+## The bigger bet — where value moves when production gets cheap
+
+Context: on 2026-07-19 I went from "remaining features" to "product submitted to the
+Chrome Web Store with live payments" in a single day (Worklog Ledger). The lesson wasn't
+about coding speed — it's that **code was the cheapest part of the day**. The hard parts
+were problem selection, positioning, the trust story, payment/compliance plumbing and
+distribution. That's the shape of the whole era: as AI makes implementation cheap,
+scarcity moves to:
+
+1. **Judgment** — knowing what to build; taste; customer intimacy. (No phase teaches
+   this; shipping products does. The side-product portfolio IS this training.)
+2. **Distribution & trust** — attention is the bottleneck; "who do I believe" grows as
+   content becomes infinite. SEO pages, community reputation, an audience — these are
+   assets that compound and can't be generated.
+3. **Accountability & verification** — someone must sign off on AI output and answer for
+   it. Legally and commercially, this doesn't automate away. The engineer who can *audit*
+   AI output (evals, testing, security review) holds the durable end of the profession.
+4. **Orchestration** — directing fleets of agents toward an outcome is becoming a real
+   skill, distinct from writing the code yourself.
+
+Note how this maps onto the roadmap: **the eval work in Phases 1-2 is verification skill;
+the agent work is orchestration skill.** They're not just portfolio items — they're the
+two engineering skills most likely to survive the squeeze on implementation work.
+
+**Track B — from selling hours to owning assets.** Salaried work sells hours, and hours
+are getting cheaper. The personal hedge is income from owned assets: products (Worklog
+Ledger live; backlog in `workspace/app-fikirleri.md`), distribution (SEO guides,
+community answers, publisher reputation), and reusable infrastructure (payments/licensing
+stack — a day of setup once, near-zero marginal cost per product). Rule of thumb for new
+work: **prefer things that compound** — a product, an audience, or infra that makes the
+next product cheaper. An hour that only produces the hour's output is the thing to
+minimize.
+
+- Quarterly metric (check at each plan review): % of income from owned assets vs. hours.
+  Direction matters more than the number.
+- Watchlist of emerging roles to keep skills adjacent to: eval/verification engineering,
+  agent orchestration, context curation (making a company's knowledge usable by AI),
+  AI liability/QA sign-off.
 
 ## Traps
 
